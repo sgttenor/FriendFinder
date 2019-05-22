@@ -23,8 +23,11 @@ app.use(express.json());
 
 
 
-
-
+// If no matching route is found default to home
+app.get("*", function(req, res) {
+    res.sendFile(path.join(__dirname, "../public/home.html"));
+  });
+//This starts the server
 app.listen(PORT, function () {
     console.log("App listening on PORT " + PORT);
 });
