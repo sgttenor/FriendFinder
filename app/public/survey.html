@@ -1,0 +1,289 @@
+<body>
+    <!-- Latest compiled and minified CSS & JS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css"
+        integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href=".//UACHA201904FSF2-FT/13-express/01-Activities/16-HotRestaurant/style.css"> -->
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.3/umd/popper.min.js"
+        integrity="sha384-vFJXuSJphROIrBnz7yo7oB41mKfc8JzQZiCq4NCceLEaO4IHwicKwpJf9c9IpFgh"
+        crossorigin="anonymous"></script>
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    </head>
+    <div class="container">
+        <div class="jumbotron text-center">
+            <h1><i class="fab fa-facebook-f"></i> Friend Finder</h1>
+            <h3>Survey Time!!!!</h3>
+            <h5>Time for those Enlightening Questions</h5>
+            <hr>
+            <a href="/"><button class="btn btn-primary btn-lg"><span class="fa fa-eye"></span>Back to Home
+                    Page</button></a>
+
+        </div>
+    </div>
+    <div class="container">
+        <h3>About You</h3>
+        <form>
+            <div class="form-group">
+                <label for="yourName">Your Name(required)</label>
+                <input type="input" class="form-control" id="name" aria-describedby="emailHelp"
+                    placeholder="Enter name">
+                <label for="photo">Picture(required)</label>
+                <input type="imput" class="form-control" id="photo" aria-describedby="emailHelp"
+                    placeholder="Enter url">
+            </div>
+    </div>
+    <select class="chosen-select" id="q2" style="display: none;">
+        <option value=""></option>
+        <option value="1">1 (Strongly Disagree)</option>
+        <option value="2">2</option>
+        <option value="3">3</option>
+        <option value="4">4</option>
+        <option value="5">5 (Strongly Agree)</option>
+    </select>
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><strong>Question 1</strong></h3>
+                        <h5>When I'm at a party, I'm the center of attention?</h5>
+                    </div>
+                    <div class="card-body">
+                        <select class="combobox form-control">
+                            <option>select and option</option>
+                            <option value="1">1 (strongly disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (strongly agree)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><strong>Question 2</strong></h3>
+                        <h5>I'm a jokester</h5>
+                    </div>
+                    <div class="card-body">
+                        <select class="combobox form-control">
+                            <option>select and option</option>
+                            <option value="1">1 (strongly disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (strongly agree)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><strong>Question 3</strong></h3>
+                        <h5>I'm an agreeable person</h5>
+                    </div>
+                    <div class="card-body">
+                        <select class="combobox form-control">
+                            <option>select and option</option>
+                            <option value="1">1 (strongly disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (strongly agree)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><strong>Question 4</strong></h3>
+                        <h5>I like to try new things</h5>
+                    </div>
+                    <div class="card-body">
+                        <select class="combobox form-control">
+                            <option>select and option</option>
+                            <option value="1">1 (strongly disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (strongly agree)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><strong>Question 5</strong></h3>
+                        <h5>I'm all about the money</h5>
+                    </div>
+                    <div class="card-body">
+                        <select class="combobox form-control">
+                            <option>select and option</option>
+                            <option value="1">1 (strongly disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (strongly agree)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><strong>Question 6</strong></h3>
+                        <h5>My ideal date would be walking on a beach</h5>
+                    </div>
+                    <div class="card-body">
+                        <select class="combobox form-control">
+                            <option>select and option</option>
+                            <option value="1">1 (strongly disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (strongly agree)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><strong>Question 7</strong></h3>
+                        <h5>I'm a night owl</h5>
+                    </div>
+                    <div class="card-body">
+                        <select class="combobox form-control">
+                            <option>select and option</option>
+                            <option value="1">1 (strongly disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (strongly agree)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><strong>Question 8</strong></h3>
+                        <h5>It's romantic to be serenaded</h5>
+                    </div>
+                    <div class="card-body">
+                        <select class="combobox form-control">
+                            <option>select and option</option>
+                            <option value="1">1 (strongly disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (strongly agree)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><strong>Question 9</strong></h3>
+                        <h5>I enjoy cooking</h5>
+                    </div>
+                    <div class="card-body">
+                        <select class="combobox form-control">
+                            <option>select and option</option>
+                            <option value="1">1 (strongly disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (strongly agree)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h3><strong>Question 10</strong></h3>
+                        <h5>I'm a sports fanatic</h5>
+                    </div>
+                    <div class="card-body">
+                        <select class="combobox form-control">
+                            <option>select and option</option>
+                            <option value="1">1 (strongly disagree)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (strongly agree)</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <button type="button" class="btn1 btn-primary btn-lg btn-block" id="submit" style="width:100%">
+            <i class="fa fa-check-circle" aria-hidden="true">
+             Submit
+            </i>
+        </button>
+
+
+
+    </div>
+    </div>
+
+
+
+    <script type="text/javascript">
+    </script>
+</body>
+<br></br>
+<footer class="footer">
+    <div class="container">
+        <p><a href="/api/">API Friends Link</a> | <a href="/api/waitlist">GitHub Repo</a>
+        </p>
+    </div>
+    </div>
+</footer>
+
+<style>
+    .combobox {
+
+        width: 20%;
+    }
+</style>
+
+</html>
