@@ -51,7 +51,7 @@
                         <h5>When I'm at a party, I'm the center of attention?</h5>
                     </div>
                     <div class="card-body">
-                        <select class="combobox form-control" id="q1">
+                        <select class="combobox form-control" id="question1">
                             <option>select and option</option>
                             <option value="1">1 (strongly disagree)</option>
                             <option value="2">2</option>
@@ -72,7 +72,7 @@
                         <h5>I'm a jokester</h5>
                     </div>
                     <div class="card-body">
-                        <select class="combobox form-control" id="q2">
+                        <select class="combobox form-control" id="question2">
                             <option>select and option</option>
                             <option value="1">1 (strongly disagree)</option>
                             <option value="2">2</option>
@@ -93,7 +93,7 @@
                         <h5>I'm an agreeable person</h5>
                     </div>
                     <div class="card-body">
-                        <select class="combobox form-control" id="q3">
+                        <select class="combobox form-control" id="question3">
                             <option>select and option</option>
                             <option value="1">1 (strongly disagree)</option>
                             <option value="2">2</option>
@@ -114,7 +114,7 @@
                         <h5>I like to try new things</h5>
                     </div>
                     <div class="card-body">
-                        <select class="combobox form-control" id="q4">
+                        <select class="combobox form-control" id="question4">
                             <option>select and option</option>
                             <option value="1">1 (strongly disagree)</option>
                             <option value="2">2</option>
@@ -135,7 +135,7 @@
                         <h5>I'm all about the money</h5>
                     </div>
                     <div class="card-body">
-                        <select class="combobox form-control" id="q5">
+                        <select class="combobox form-control" id="question5">
                             <option>select and option</option>
                             <option value="1">1 (strongly disagree)</option>
                             <option value="2">2</option>
@@ -156,7 +156,7 @@
                         <h5>My ideal date would be walking on a beach</h5>
                     </div>
                     <div class="card-body">
-                        <select class="combobox form-control" id="q6">
+                        <select class="combobox form-control" id="question6">
                             <option>select and option</option>
                             <option value="1">1 (strongly disagree)</option>
                             <option value="2">2</option>
@@ -177,7 +177,7 @@
                         <h5>I'm a night owl</h5>
                     </div>
                     <div class="card-body">
-                        <select class="combobox form-control" id="q7">
+                        <select class="combobox form-control" id="question7">
                             <option>select and option</option>
                             <option value="1">1 (strongly disagree)</option>
                             <option value="2">2</option>
@@ -198,7 +198,7 @@
                         <h5>It's romantic to be serenaded</h5>
                     </div>
                     <div class="card-body">
-                        <select class="combobox form-control" id="q8">
+                        <select class="combobox form-control" id="question8">
                             <option>select and option</option>
                             <option value="1">1 (strongly disagree)</option>
                             <option value="2">2</option>
@@ -219,7 +219,7 @@
                         <h5>I enjoy cooking</h5>
                     </div>
                     <div class="card-body">
-                        <select class="combobox form-control" id="q9">
+                        <select class="combobox form-control" id="question9">
                             <option>select and option</option>
                             <option value="1">1 (strongly disagree)</option>
                             <option value="2">2</option>
@@ -240,7 +240,7 @@
                         <h5>I'm a sports fanatic</h5>
                     </div>
                     <div class="card-body">
-                        <select class="combobox form-control" id="q10">
+                        <select class="combobox form-control" id="question10">
                             <option>select and option</option>
                             <option value="1">1 (strongly disagree)</option>
                             <option value="2">2</option>
@@ -261,22 +261,161 @@
         </button>
     </div>
 
-    <br></br>
+    <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+        aria-hidden="true">
+
+        <div class="modal-dialog">
+
+            <div class="modal-content">
+
+                <div class="modal-body">
+
+                    <button type="button" class="close" data-dismiss="modal"><span
+                            aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+
+                    <div class="caption" align="center">Your new bestie is ... </div>
+
+                    <img src="" id="imagepreview" height=80% width=80%>
+
+                    <div class="caption" id="caption" align="center"></div>
+
+                </div>
+
+                <div id="modal1" class="modal">
+
+                    <div class="modal-content">
+
+                        <h4>Meet Your New BFF</h4>
+
+                        <h5 id="matchName"></h5>
+
+                        <img id="matchPic" src="" alt="No Image" width=250px>
+
+                    </div>
+
+                    <div class="modal-footer">
+
+                        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Done</a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <br></br>
         <footer class="footer">
             <div class="container">
                 <p><a href="/api/friendsArray">API Friends Link</a> | <a
                         href="https://github.com/sgttenor/FriendFinder">GitHub Repo</a>
                 </p>
             </div>
-            </div>
-        </footer>
+    </div>
+    </footer>
+
+
+    <script type="text/javascript">
+
+        $("#submit").on("click", function (event) {
+
+            //prevent it from erasing data before it is captured
+
+            event.preventDefault();
+
+            alert("Thank you for submitting to the FriendFinder Survey");
+
+            // Here we grab the form elements
+
+            //the question values are returning undefined
+
+            var newFriend = {
+
+                newName: $("#name").val().trim(),
+
+                newImg: $("#photo").val().trim(),
+
+                scores: [
+
+                    $("#question1").val(),
+
+                    $("#question2").val(),
+
+                    $("#question3").val(),
+
+                    $("#question4").val(),
+
+                    $("#question5").val(),
+
+                    $("#question6").val(),
+
+                    $("#question7").val(),
+
+                    $("#question8").val(),
+
+                    $("#question9").val(),
+
+                    $("#question10").val()
+
+                ]
+
+            };
+            //log newFriend captured from form
+            console.log(newFriend);
+            console.log(newFriend.newName);
+            console.log(newFriend.scores);
+
+
+            var currentURL = window.location.origin;
 
 
 
-        <script type="text/javascript">
+            //AJAX posts the data to friends API.
 
-        
-        </script>
+            $.post(currentURL + "/api/friendsArray", newFriend, function (data) {
+
+                //Grab the result from the AJAX post so that the best match's name and photo are displayed.
+
+                $("#matchName").text(data.name);
+
+                $("#matchPic").attr("src", data.profilePic);
+
+
+
+            });
+
+            // Show the modal with the best match
+
+            $('.modal').modal();
+
+            $("#name").val("");
+
+            $("#photo").val("");
+
+            $("#question1").val("");
+
+            $("#question2").val("");
+
+            $("#question3").val("");
+
+            $("#question4").val("");
+
+            $("#question5").val("");
+
+            $("#question6").val("");
+
+            $("#question7").val("");
+
+            $("#question8").val("");
+
+            $("#question9").val("");
+
+            $("#question10").val("");
+        })
+
+
+    </script>
 </body>
 
 <style>
