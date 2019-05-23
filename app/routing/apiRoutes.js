@@ -56,9 +56,17 @@ module.exports = function (app) {
                 var currentUserScore = userInput.scores[j];
                totalDifference += Math.abs(parseInt(currentUserScore) - parseInt(currentFriendScore));
 
+               if (totalDifference <= matchName.friendDifference) {
+                // Reset the bestMatch to be the new friend.
+                matchName.name = friendsArray[i].name;
+                matchName.photo = friendsArray[i].photo;
+                matchName.friendDifference = totalDifference;
+               
+              }
+              console.log('diff = ' + totalDifference);
             }
 
-             console.log('diff = ' + totalDifference);
+           
 
 
 

@@ -2,7 +2,7 @@
 var friendsArray = [
     {
         name: "Ahmed",
-        photo: "https://media.licdn.com/mpr/mpr/shrinknp_200_200/AAEAAQAAAAAAAAq7AAAAJDAwYzI4NTQ4LWYwZWUtNGFkYS1hNTYwLTZjYzkwY2ViZDA3OA.jpg",
+        photo: "https://www.lifewithdogs.tv/wp-content/uploads/2015/12/12.22.15-wolf-mom.jpg",
         scores: [
             "5",
             "1",
@@ -61,7 +61,7 @@ var friendsArray = [
     },
     {
         name: "Jennifer Anniston",
-        photo: "https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F1%2F16%2FJenniferAnistonHWoFFeb2012.jpg&imgrefurl=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FJennifer_Aniston&docid=wcuzfMiS7etWzM&tbnid=FQI2iGH6iufJlM%3A&vet=10ahUKEwiO47n_wrDiAhWOnp4KHfl9DeoQMwiAASgDMAM..i&w=822&h=754&bih=747&biw=1536&q=jennifer%20aniston&ved=0ahUKEwiO47n_wrDiAhWOnp4KHfl9DeoQMwiAASgDMAM&iact=mrc&uact=8",
+        photo: "https://www.telegraph.co.uk/content/dam/beauty/2016/04/27/Jennifer-Aniston_trans_NvBQzQNjv4BqkX3onuOCNa0uuigJZQxtEBOJpD29tp1fMw9A0Cp6c54.jpg?imwidth=450",
         scores: [
             "3",
             "3",
@@ -76,7 +76,7 @@ var friendsArray = [
     },
     {
         name: "Lou Ritter",
-        photo: "https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAkDAAAAJDhhZTI5NTk2LWQzZjUtNDJjZi1hMTM2LTQ3ZjNmYjE0YmY2NA.jpg",
+        photo: "https://dogzone-tcwebsites.netdna-ssl.com/wp-content/uploads/2018/07/siberian-husky-price.jpg",
         scores: [
             "4",
             "3",
@@ -106,7 +106,7 @@ var friendsArray = [
     },
     {
         name: "Laurie",
-        photo: "IMG_0240.jpg",
+        photo: "https://animalso.com/wp-content/uploads/2017/01/Siberian-Husky_5.jpg",
         scores: [
             "3",
             "3",

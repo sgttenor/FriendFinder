@@ -379,9 +379,9 @@
                     // Grab the result from the AJAX post so that the best match's name and photo are displayed.
                     console.log("Your Best match is...." + data.name);
                     console.log(data.photo)
+                    console.log(data);
                      $("#matchName").append(data.name);
-
-                     $("#matchImg").prepend("src", data.photo);
+                     $("#matchImg").attr("src", data.photo);
 
                      // Show the modal with the best match 
 
@@ -425,6 +425,11 @@
     .combobox {
 
         width: 20%;
+    }
+
+    img{
+        width: 400px;
+        height: 400px;
     }
 </style>
 
