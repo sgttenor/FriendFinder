@@ -261,48 +261,43 @@
         </button>
     </div>
 
-    <div class="modal fade" id="imagemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
-        aria-hidden="true">
+    <div id="resultsModal" class="modal fade" role="dialog">
 
         <div class="modal-dialog">
 
+            <!-- Modal Content-->
             <div class="modal-content">
+
+                <!-- "X" Button to close the modal -->
+
+                <div class="modal-header">
+
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                    <h2 class="modal-title"><strong>Meet Your New Friend!</strong></h2>
+
+                </div>
+
+                <!-- Modal Body (For Match Info) -->
 
                 <div class="modal-body">
 
-                    <button type="button" class="close" data-dismiss="modal"><span
-                            aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                    <h2 id="matchName"></h2>
 
-                    <div class="caption" align="center">Your new bestie is ... </div>
-
-                    <img src="" id="imagepreview" height=80% width=80%>
-
-                    <div class="caption" id="caption" align="center"></div>
+                    <img id="matchpic" src="" alt="Image Not Found" style="max-width: 350px;">
 
                 </div>
 
-                <div id="modal1" class="modal">
 
-                    <div class="modal-content">
 
-                        <h4>Meet Your New BFF</h4>
+                <!-- Modal Footer (Close Button) -->
 
-                        <h5 id="matchName"></h5>
+                <div class="modal-footer">
 
-                        <img id="matchPic" src="" alt="No Image" width=250px>
-
-                    </div>
-
-                    <div class="modal-footer">
-
-                        <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Done</a>
-
-                    </div>
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
 
                 </div>
-
             </div>
-
         </div>
 
         <br></br>
@@ -379,15 +374,13 @@
 
                 $("#matchName").text(data.name);
 
-                $("#matchPic").attr("src", data.profilePic);
+                $("#matchPic").attr("src", data.photo);
 
 
 
             });
 
             // Show the modal with the best match
-
-            $('.modal').modal();
 
             $("#name").val("");
 
