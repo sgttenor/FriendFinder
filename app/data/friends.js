@@ -21,7 +21,7 @@ var friendsArray = [
     },
     {
         name: "Jennifer Anniston",
-        photo: "thttps://www.google.com/url?sa=i&rct=j&q=&esrc=s&source=images&cd=&ved=2ahUKEwiHwaLkjLDiAhXCgFQKHZlaDPAQjRx6BAgBEAU&url=https%3A%2F%2Fwww.redbookmag.com%2Flife%2Fg26148103%2Fjennifer-aniston-hollywood-evolution%2F&psig=AOvVaw3PjMyv-aweWR2pJmdKHNPz&ust=1558647538297650est",
+        photo: "https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2F1%2F16%2FJenniferAnistonHWoFFeb2012.jpg&imgrefurl=https%3A%2F%2Fen.wikipedia.org%2Fwiki%2FJennifer_Aniston&docid=wcuzfMiS7etWzM&tbnid=FQI2iGH6iufJlM%3A&vet=10ahUKEwiO47n_wrDiAhWOnp4KHfl9DeoQMwiAASgDMAM..i&w=822&h=754&bih=747&biw=1536&q=jennifer%20aniston&ved=0ahUKEwiO47n_wrDiAhWOnp4KHfl9DeoQMwiAASgDMAM&iact=mrc&uact=8",
         scores: ["3", "3", "1", "1", "3", "4", "3", "1", "4", "4"]
     },
     {
