@@ -60,12 +60,7 @@ module.exports = function (app) {
 
             if (diff < totalDifference) {
 
-                // console.log('Closest match found = ' + diff);
-
-                // console.log('Friend name = ' + friends[i].name);
-
-                // console.log('Friend image = ' + friends[i].photo);
-
+            
 
 
                 totalDifference = diff;

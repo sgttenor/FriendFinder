@@ -261,55 +261,59 @@
         </button>
     </div>
 
-        <br></br>
-        <footer class="footer">
-            <div class="container">
-                <p><a href="/api/friendsArray">API Friends Link</a> | <a
-                        href="https://github.com/sgttenor/FriendFinder">GitHub Repo</a>
-                </p>
-            </div>
-    </div>
+    <br></br>
+    <footer class="footer">
+        <div class="container">
+            <p><a href="/api/friendsArray">API Friends Link</a> | <a
+                    href="https://github.com/sgttenor/FriendFinder">GitHub Repo</a>
+            </p>
+        </div>
+        </div>
     </footer>
 
-    <div id="resultsModal" class="modal fade" role="dialog">
+    <!-- <div id="resultsModal" class="modal fade" role="dialog">
 
         <div class="modal-dialog">
-  
-  
-  
-          <!-- Modal content-->
-  
-          <div class="modal-content">
-  
-            <div class="modal-header">
-  
-              <button type="button" class="close" data-dismiss="modal">&times;</button>
-  
-              <h2 class="modal-title"><strong>Best Match</strong></h2>
-  
-            </div>
-  
-            <div class="modal-body">
-  
-              <h2 id="matchName"></h2>
-  
-              <img id="matchImg" src="" alt="">
-  
-            </div>
-  
-            <div class="modal-footer">
-  
-              <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-  
-            </div>
-  
-          </div>
-  
-  
-  
-        </div>
-  
-      </div>
+
+
+
+            <!-- Modal content-->
+
+            <!-- <div class="modal-content">
+
+                <div class="modal-header">
+
+                    <button type="button" class="close" data-dismiss="modal">&times;</button>
+
+                    <h2 class="modal-title"><strong>Best Match</strong></h2>
+
+                </div>
+
+                <div class="modal-body">
+
+                    <h2 id="matchName"></h2>
+
+                    <img id="matchImg"
+                        src="file:///Users/lisavanorden/Documents/RCB_files/week13_files/wk13_hw/friendfinder/assets/images/floya_avatar_pic.jpg"
+                        alt="">
+
+                </div>
+
+                <div class="modal-footer">
+
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+
+                </div>
+
+            </div> -->
+
+
+
+        <!-- </div>
+
+    </div> --> -->
+<div id="matchName">Match is ---</div>
+<div id="matchImg">Image is ---</div>
 
     <script type="text/javascript">
 
@@ -373,45 +377,46 @@
             $.post(URL + "/api/friendsArray", newFriend,
 
                 function (data) {
+                    // Grab the result from the AJAX post so that the best match's name and photo are displayed.
 
-                    $("#matchName").text(data.name);
+                    $("#matchName").append(data.name);
 
-                    $("#matchPic").attr('src', data.photo);
+                    $('#matchImg').prepend("src", data.photo);
 
-                    $("#resultsModal").modal('toggle');
+                    // Show the modal with the best match 
 
-                    console.log(data.name);
-
-                    ("#name").val("");
-
-                    $("#photo").val("");
-
-                    $("#question1").val("");
-
-                    $("#question2").val("");
-
-                    $("#question3").val("");
-
-                    $("#question4").val("");
-
-                    $("#question5").val("");
-
-                    $("#question6").val("");
-
-                    $("#question7").val("");
-
-                    $("#question8").val("");
-
-                    $("#question9").val("");
-
-                    $("#question10").val("");
-
-
+                    // $("#resultsModal").modal('toggle');
                 });
 
-            // Show the modal with the best match
+           
+            $(".modal").modal();
 
-            
+            //Clear forms after submision
+            $("#name").val("");
+
+            $("#photo").val("");
+
+            $("#question1").val("");
+
+            $("#question2").val("");
+
+            $("#question3").val("");
+
+            $("#question4").val("");
+
+            $("#question5").val("");
+
+            $("#question6").val("");
+
+            $("#question7").val("");
+
+            $("#question8").val("");
+
+            $("#question9").val("");
+
+            $("#question10").val("");
+
+
         })
     </script>
 </body>
