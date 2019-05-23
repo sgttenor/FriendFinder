@@ -26,9 +26,13 @@ module.exports = function (app) {
 
         // Compute best friend match
 
-        var matchName = '';
+        var matchName = {
+            name: "",
+            photo: "",
+            friendDifference: 2000
+        };
 
-        var matchImage = '';
+       // var matchImage = '';
 
         var totalDifference = 10000; // Make the initial value big for comparison
 
@@ -37,37 +41,39 @@ module.exports = function (app) {
         // Examine all existing friends in the list
 
         for (var i = 0; i < friendsArray.length; i++) {
-
-            // console.log('friend = ' + JSON.stringify(friends[i]));
+            currentFriend = friendsArray[i];
+             console.log("Current Friend = " + currentFriend);
+             totalDifference = 0;
 
 
 
             // Compute differenes for each question
 
-            var diff = 0;
+          
 
-            for (var j = 0; j < userResponses.length; j++) {
-
-                diff += Math.abs(friendsArray[i].scores[j] - userResponses[j]);
+            for (var j = 0; j < currentFriend.scores.length; j++) {
+                var currentFriendScore = currentFriend.scores[j];
+                var currentUserScore = userInput.scores[j];
+               totalDifference += Math.abs(parseInt(currentUserScore) - parseInt(currentFriendScore));
 
             }
 
-            // console.log('diff = ' + diff);
+             console.log('diff = ' + totalDifference);
 
 
 
             // If lowest difference, record the friend match
 
-            if (diff < totalDifference) {
+            if (totalDifference <= matchName.friendDifference) {
 
             
 
 
-                totalDifference = diff;
+                
+                matchName.name = currentFriend.name;
+                matchName.photo = currentFriend.photo;
 
-                matchName = friendsArray[i].name;
-
-                matchImage = friendsArray[i].photo;
+                matchName.friendDifference = currentFriend.friendDifference;
 
             }
 
@@ -76,6 +82,6 @@ module.exports = function (app) {
         friendsArray.push(userInput);
   // Send appropriate response
 
-        res.json({ status: 'OK', matchName: matchName, matchImage: matchImage });
+        res.json(matchName);
     });
 }

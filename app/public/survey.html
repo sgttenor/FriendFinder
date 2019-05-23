@@ -271,7 +271,7 @@
         </div>
     </footer>
 
-    <!-- <div id="resultsModal" class="modal fade" role="dialog">
+    <div id="resultsModal" class="modal fade" role="dialog">
 
         <div class="modal-dialog">
 
@@ -279,7 +279,7 @@
 
             <!-- Modal content-->
 
-            <!-- <div class="modal-content">
+            <div class="modal-content">
 
                 <div class="modal-header">
 
@@ -294,7 +294,7 @@
                     <h2 id="matchName"></h2>
 
                     <img id="matchImg"
-                        src="file:///Users/lisavanorden/Documents/RCB_files/week13_files/wk13_hw/friendfinder/assets/images/floya_avatar_pic.jpg"
+                        src=""
                         alt="">
 
                 </div>
@@ -309,9 +309,9 @@
 
 
 
-        <!-- </div>
+        </div>
 
-    </div> --> 
+    </div> 
 
     <script type="text/javascript">
 
@@ -322,6 +322,7 @@
             event.preventDefault();
 
             alert("Thank you for submitting to the FriendFinder Survey");
+            alert("Searching for your Best Match")
 
             // Here we grab the form elements
 
@@ -376,14 +377,15 @@
 
                 function (data) {
                     // Grab the result from the AJAX post so that the best match's name and photo are displayed.
+                    console.log("Your Best match is...." + data.name);
+                    console.log(data.photo)
+                     $("#matchName").append(data.name);
 
-                    $("#matchName").append(data.name);
+                     $("#matchImg").prepend("src", data.photo);
 
-                    $('#matchImg').prepend("src", data.photo);
+                     // Show the modal with the best match 
 
-                    // Show the modal with the best match 
-
-                    // $("#resultsModal").modal('toggle');
+                      $("#resultsModal").modal('toggle');
                 });
 
            
