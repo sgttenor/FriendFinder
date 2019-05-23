@@ -5,29 +5,82 @@ console.log("friends", friendsArray)
 module.exports = function (app) {
 
     app.get("/api/friendsArray", function (req, res) {
-        console.log("get ruta api/friends")
+        console.log("get api/friends")
         res.json(friendsArray)
         ///
     });
 
-    app.post("/api/friends", function (req, res) {
-        console.log("post ruta api/friends");
-        var b = req.body;
-        console.log(b);
+    app.post("/api/friendsArray", function (req, res) {
 
-        var total = 0;
-        for (let i = 0; i < friendsArray.length; i++) {
+        var userInput = req.body;
 
-            for (let y = 0; y < 10; y++) {
-                console.log("este score ", + friendsArray[i].scores[y]);
-                console.log(b[0].score)
-                total = Math.abs(b[0])
+        // console.log('userInput = ' + JSON.stringify(userInput));
 
+
+
+        var userResponses = userInput.scores;
+
+        // console.log('userResponses = ' + userResponses);
+
+
+
+        // Compute best friend match
+
+        var matchName = '';
+
+        var matchImage = '';
+
+        var totalDifference = 10000; // Make the initial value big for comparison
+
+
+
+        // Examine all existing friends in the list
+
+        for (var i = 0; i < friendsArray.length; i++) {
+
+            // console.log('friend = ' + JSON.stringify(friends[i]));
+
+
+
+            // Compute differenes for each question
+
+            var diff = 0;
+
+            for (var j = 0; j < userResponses.length; j++) {
+
+                diff += Math.abs(friendsArray[i].scores[j] - userResponses[j]);
+
+            }
+
+            // console.log('diff = ' + diff);
+
+
+
+            // If lowest difference, record the friend match
+
+            if (diff < totalDifference) {
+
+                // console.log('Closest match found = ' + diff);
+
+                // console.log('Friend name = ' + friends[i].name);
+
+                // console.log('Friend image = ' + friends[i].photo);
+
+
+
+                totalDifference = diff;
+
+                matchName = friendsArray[i].name;
+
+                matchImage = friendsArray[i].photo;
 
             }
 
         }
-        return res;
-        ///
+        // Add new user
+        friendsArray.push(userInput);
+  // Send appropriate response
+
+        res.json({ status: 'OK', matchName: matchName, matchImage: matchImage });
     });
 }
