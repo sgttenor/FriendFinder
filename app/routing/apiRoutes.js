@@ -10,12 +10,10 @@ module.exports = function (app) {
         ///
     });
 
-    app.post('/api/friends', function (req, res) {
+    app.post("/api/friends", function (req, res) {
         console.log("post ruta api/friends");
         var b = req.body;
         console.log(b);
-
-        // buscar en arreglo friends el best matching   [3,2,1]   [3,5,1] = 2+3+2=7 / 0+3+0=3
 
         var total = 0;
         for (let i = 0; i < friendsArray.length; i++) {
